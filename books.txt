@@ -1,0 +1,5 @@
+Tolstoy War_and_Peace 1869 5 1200
+Dostoevsky Crime_and_Punishment 1866 3 950
+Pushkin Eugene_Onegin 1833 7 800
+Tolstoy Anna_Karenina 1877 4 1100
+Gogol Dead_Souls 1842 2 900
