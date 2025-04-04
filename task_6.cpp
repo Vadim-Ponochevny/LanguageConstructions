@@ -53,7 +53,7 @@ int main() {
         << setw(6) << "YEAR" << " | "
         << setw(6) << "COUNT" << " | "
         << "PRICE" << endl;
-    cout << string(60, '-') << endl; // Разделительная линия
+    cout << string(60, '-') << endl;
 
     for (int i = 0; i < bookCount; ++i) {
         fin >> library[i].author
