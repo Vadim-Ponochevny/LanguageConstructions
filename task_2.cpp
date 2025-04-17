@@ -6,28 +6,27 @@ using namespace std;
 
 
 int main() {
-    const double E = 115.0;
-    const double r = 29.7;
+    const double electromotiveForce = 115.0;
+    const double internalResistance = 29.7;
+    double resistance = 10;
+    double currentPower;
+    int marginSize = 2;
 
-    cout << fixed << setprecision(2); 
-    cout << "R (Ohm)\tP (Watt)" << endl;
-    cout << "----------------" << endl;
-
-    double R = 10; 
-
+    cout << fixed << setprecision(marginSize)
+         << "R (Ohm)\tP (Watt)\n"
+         << "----------------\n";
     
-    while (R < 50) {
-        double P = R * pow(E / (R + r), 2); 
-        cout << R << "\t" << P << endl;
-        R += 10; 
+    while (resistance < 50) {
+        currentPower = resistance * pow(electromotiveForce / (resistance + internalResistance), 2);
+        cout << resistance << "\t" << currentPower << endl;
+        resistance += 10; 
     }
-
     
     do {
-        double P = R * pow(E / (R + r), 2); 
-        cout << R << "\t" << P << endl;
-        R += 50; 
-    } while (R <= 300);
+        currentPower = resistance * pow(electromotiveForce / (resistance + internalResistance), 2);
+        cout << resistance << "\t" << currentPower << endl;
+        resistance += 50; 
+    } while (resistance <= 300);
 
     return 0;
 }
